@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:ital,wght@0,600;1,400&display=swap');
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Violet);
+}
+section {
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 650px) {
+    section {
+        background-image: url("../images/bg-desktop.svg");
+        background-size: cover;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    .logo-holder{
+        grid-area: 1/1 /2/3;
+        max-width: 300px;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        margin: -30px auto 0;
+        grid-area: 2/2 /2/3;
+    }
+    .image{
+            grid-area: 2/1 /2/2;
+    }
+    .social {
+        justify-content: flex-end;
+        margin-right: 80px;
+    }
+
+}
+
+
+.container {
+    display: grid;
+    padding: 0px 40px;
+    gap: 20px;
+}
+.logo {
+   width: 60%;
+}
+.container .image img {
+    max-width: 100%;
+}
+.container .info h2 {
+    color: white;
+    font-family: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.container .info p {
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: rgb(216, 216, 216);
+    text-align: center;
+}
+.container .info a {
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.container .info a:hover {
+    background-color: var(--Soft-Magenta);
+}
+.social{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+.fa-brands{
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+.fa-brands:hover {
+    color: var(--Soft-Magenta);
+}
+
